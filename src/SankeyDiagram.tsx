@@ -442,7 +442,7 @@ export default function SankeyDiagram({ items }: SankeyDiagramProps) {
       .attr("y", d => ((d.y1 || 0) - (d.y0 || 0)) / 2)
       .attr("dy", "0.35em")
       .attr("text-anchor", "start")
-      .text(d => d.name.length > 32 ? d.name.slice(0, 32) + '...' : d.name)
+      .text(d => d.name)
       .attr("font-size", "10px")
       .attr("font-family", "sans-serif")
       .attr("cursor", d => (d.isRecipient && d.profileUrl) || (d.isFlow && d.flowUrl) || (!d.isRecipient && d.itemUrl) ? "pointer" : "default")
